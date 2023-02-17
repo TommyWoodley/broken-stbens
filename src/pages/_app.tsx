@@ -26,23 +26,17 @@ function App() {
   return (
     <HelmetProvider>
       <ThemeProvider>
-        <ToastProvider>
-          <UserProvider>
-            <AxiosInstanceProvider config={{ baseURL }}>
-              <GameProvider>
-                <Area>
-                  <ScrollViewport>
-                    {/* TODO: Add a no-match route (i.e. 404 Not Found) */}
-                    <Login ></Login>
-                  </ScrollViewport>
-                  <Scrollbar orientation="vertical">
-                    <Thumb />
-                  </Scrollbar>
-                </Area>
-              </GameProvider>
-            </AxiosInstanceProvider>
-          </UserProvider>
-        </ToastProvider>
+        <UserProvider>
+          <Area>
+            <ScrollViewport>
+              {/* TODO: Add a no-match route (i.e. 404 Not Found) */}
+              <Login ></Login>
+            </ScrollViewport>
+            <Scrollbar orientation="vertical">
+              <Thumb />
+            </Scrollbar>
+          </Area>
+        </UserProvider>
       </ThemeProvider>
     </HelmetProvider>
   )
