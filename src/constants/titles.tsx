@@ -5,20 +5,20 @@ import { Exercise } from '../types/schemas/abc'
 
 // All titles start with the academic year if not current,
 const addYear = (year?: string) => (year !== shortYear() ? formatShortYear(year) + ':' : '')
-// All titles end with " | Scientia"
-const SCIENTIA = '| Scientia'
+// All titles end with " | St Benedicts"
+const STBENS = '| St Benedict\'s'
 
 const titles = {
-  login: ['Log in', SCIENTIA].join(' '),
+  login: ['Log in', STBENS].join(' '),
 
   modules: (year?: string, cohortName?: string) =>
-    [addYear(year), 'Modules', cohortName ? `• ${cohortName}` : '', SCIENTIA].join(' '),
+    [addYear(year), 'Modules', cohortName ? `• ${cohortName}` : '', STBENS].join(' '),
 
   module: (year?: string, moduleCode?: string | null, moduleTitle?: string) =>
-    [addYear(year), moduleCode ?? 'Module', moduleTitle, SCIENTIA].join(' '),
+    [addYear(year), moduleCode ?? 'Module', moduleTitle, STBENS].join(' '),
 
   exercises: (year?: string, moduleCode?: string | null, moduleTitle?: string) =>
-    [addYear(year), 'Exercises •', moduleCode ?? 'Module', moduleTitle, SCIENTIA].join(' '),
+    [addYear(year), 'Exercises •', moduleCode ?? 'Module', moduleTitle, STBENS].join(' '),
 
   exercise: (year?: string, exercise?: Exercise, moduleCode?: string, exerciseNumber?: string) =>
     [
@@ -28,7 +28,7 @@ const titles = {
       exercise?.title,
       '•',
       exercise?.moduleName ?? moduleCode,
-      SCIENTIA,
+      STBENS,
     ].join(' '),
 
   timeline: (year?: string, term?: string, cohortName?: string) =>
@@ -36,7 +36,7 @@ const titles = {
       addYear(year),
       term ? capitaliseFirstLetter(term) : 'Timeline',
       cohortName ? `• ${cohortName}` : '',
-      SCIENTIA,
+      STBENS,
     ].join(' '),
 }
 
