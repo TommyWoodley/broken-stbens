@@ -1,0 +1,7 @@
+@import '@radix-ui/colors/sand.css';
+
+/* When Category selector is :focus (user's cursor is blinking in input box), 
+   the input text turns gray to indicate user can type */
+.edit-select__control--is-focused .edit-select__value-container .edit-select__single-value {
+  color: var(--sand9);
+}
