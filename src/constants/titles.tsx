@@ -1,10 +1,10 @@
 
 // Meta Titles
 
-const STBENS = '| St Benedict\'s'
+export const SCHOOL_NAME = 'St Benedict\'s'
 
 const titles = {
-  login: ['Log in', STBENS].join(' '),
+  login: ['Log in', SCHOOL_NAME].join(' | '),
 }
 
 export default titles

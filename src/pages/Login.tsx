@@ -7,6 +7,7 @@ import { ThemeContext } from '../lib/theme.context'
 import { Container } from '../styles/_app.style'
 import { ActionButton } from '../styles/dialog.style'
 import { Fieldset, Form, Input, Label, Logo, Name, Tagline } from '../styles/login.style'
+import { SCHOOL_NAME } from '../constants/titles'
 
 /* TODO: Add a help toggle to the login form (i.e. information for new users to the platform) */
 const Login = () => {
@@ -56,14 +57,13 @@ const Login = () => {
           src="assets/logo.png"
           style={{ filter: `invert(${theme === 'dark' ? 1 : 0})` }}
         />
-        <Name>St Benedicts</Name>
+        <Name>{SCHOOL_NAME}</Name>
         <Tagline style={{ marginBottom: '2rem' }}>Please don't hack into me</Tagline>
 
         <Fieldset>
           <Label htmlFor="Username">Username</Label>
           <Input
             name="Username"
-            autoComplete="username"
             value={username}
             placeholder="abc123"
             onChange={(e) => setUsername(e.target.value)}
@@ -76,7 +76,6 @@ const Login = () => {
           <Input
             name="Password"
             type="password"
-            autoComplete="current-password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
