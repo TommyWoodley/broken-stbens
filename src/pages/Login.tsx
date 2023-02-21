@@ -57,8 +57,9 @@ const Login = () => {
           src="assets/logo.png"
           style={{ filter: `invert(${theme === 'dark' ? 1 : 0})` }}
         />
+
         <Name>{SCHOOL_NAME}</Name>
-        <Tagline style={{ marginBottom: '2rem' }}>Please don't hack into me</Tagline>
+        <Tagline style={{ marginBottom: '2rem' }}>Super Secure Website</Tagline>
 
         <Fieldset>
           <Label htmlFor="Username">Username</Label>
