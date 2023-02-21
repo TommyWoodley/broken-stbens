@@ -5,10 +5,10 @@ export const Form = styled('form', {
   flexDirection: 'column',
   gap: '1rem',
   alignItems: 'center',
-  backgroundColor: '$subtleBackground',
+  backgroundColor: 'white',
   padding: '1rem',
   borderRadius: '1rem',
-  border: '0.0625rem solid $separator',
+  border: '1.0rem solid $separator',
   minWidth: '20rem',
   '@media(max-width: 600px)': {
     width: '100%',
@@ -62,7 +62,7 @@ export const Input = styled('input', {
   borderRadius: '0.5rem',
   padding: '0.75rem',
   height: '2.75rem',
-  backgroundColor: '$appBackground',
+  backgroundColor: '$neutral2',
   transition: 'background-color 0.3s ease-in-out',
   '&::placeholder': {
     color: '$sand8',

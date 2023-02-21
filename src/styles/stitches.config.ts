@@ -58,7 +58,7 @@ export const { styled, css, globalCss, theme } = createStitches({
       ...purple,
       ...plum,
       ...orange,
-      appBackground: '$neutral1',
+      appBackground: 'hsl(178,37%,26%)',
       subtleBackground: '$neutral2',
       elementBackground: '$neutral3',
       elementHover: '$neutral4',

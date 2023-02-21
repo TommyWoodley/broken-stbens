@@ -35,8 +35,8 @@ export const Container = styled('div', {
     },
     dotted: {
       true: {
-        $$dotSpace: '1.5rem',
-        $$dotSize: '0.0625rem',
+        $$dotSpace: '3.0rem',
+        $$dotSize: '0.1rem',
         background: `linear-gradient(90deg, $appBackground calc($$dotSpace - $$dotSize), transparent 1%) center,
                      linear-gradient($appBackground calc($$dotSpace - $$dotSize), transparent 1%) center, 
                      $solidBackground`,
