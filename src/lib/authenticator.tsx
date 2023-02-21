@@ -31,6 +31,7 @@ export default function useAuth() {
 
             if (str1 === str2) {
                 setIsLoggedIn(true)
+                return;
             }
         }
 
