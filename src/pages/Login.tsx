@@ -27,7 +27,7 @@ const Login = () => {
 
   useEffect(() => {
     if (isLoggedIn) addToast({ variant: 'success', title: 'Yayyy - You broken into the admin account' })
-  }, [isLoggedIn])
+  }, [isLoggedIn, addToast])
 
   return (
     <Container center expand dotted css={{ paddingTop: 0 }}>
