@@ -1,4 +1,4 @@
-import {useContext, useEffect, useState} from 'react'
+import {useContext, useState} from 'react'
 import { Helmet } from 'react-helmet-async'
 
 import titles from '../constants/titles'
@@ -8,14 +8,12 @@ import { ActionButton } from '../styles/dialog.style'
 import { Fieldset, Form, Input, Label, Logo, Name, Tagline } from '../styles/login.style'
 import { SCHOOL_NAME } from '../constants/titles'
 import useAuth from "../lib/authenticator";
-import {useToast} from "../lib/toast.context";
 
 /* TODO: Add a help toggle to the login form (i.e. information for new users to the platform) */
 const Login = () => {
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
   const { loginUser, isLoggedIn } = useAuth()
-  const { addToast } = useToast()
 
   const { theme } = useContext(ThemeContext)
 
@@ -24,10 +22,6 @@ const Login = () => {
 
     loginUser(username, password)
   }
-
-  useEffect(() => {
-    if (isLoggedIn) addToast({ variant: 'success', title: 'Yayyy - You broken into the admin account' })
-  }, [isLoggedIn, addToast])
 
   return (
     <Container center expand dotted css={{ paddingTop: 0 }}>
