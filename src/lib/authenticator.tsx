@@ -57,6 +57,7 @@ export default function useAuth() {
 
             if (str1 === str2) {
                 setIsLoggedIn(true)
+                addToast({ variant: 'success', title: 'Yay - You just performed SQL Injection' })
                 return;
             }
         }
